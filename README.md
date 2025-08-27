@@ -24,21 +24,21 @@ It automatically generates:
 
 0. Scarica **ExifTool**  
    - Scarica il software da [https://exiftool.org](https://exiftool.org)  
-   - Copia il file dentro la cartella **`GPSExtract`**, poi rinominalo in `exiftool.exe`, insieme alla cartella `exiftool_files`, se presente
+   - Copia il file dentro la cartella **`GPSExtractionTool`**, poi rinominalo in `exiftool.exe`, insieme alla cartella `exiftool_files`, se presente
 
 
 ---
 
 ## Utilizzo rapido
 
-1. Copia l’intera cartella **`GPSExtract`** (contenente `exiftool.exe` e `extract_gps.bat`)  
+1. Copia l’intera cartella **`GPSExtractionTool`** (contenente `exiftool.exe` e `extract_gps.bat`)  
    dentro la cartella che contiene le foto o i video da analizzare.  
    *Esempio:*  
    ```
-   D:\Viaggi\2024\Foto\GPSExtract\
+   D:\Viaggi\2024\Foto\GPSExtractionTool\
    ```
 
-2. Apri la cartella `GPSExtract` e fai doppio click su:  
+2. Apri la cartella `GPSExtractionTool` e fai doppio click su:  
    ```
    extract_gps.bat
    ```
@@ -47,7 +47,7 @@ It automatically generates:
 
 4. I risultati saranno salvati in:  
    ```
-   GPSExtract\GPSData_extracted\
+   GPSExtractionTool\GPSData_extracted\
    ```
 
 ---
@@ -130,8 +130,8 @@ It automatically generates:
    - Se manca → errore e stop.
 
 2. **Individuazione sorgente**
-   - Viene analizzata la **cartella superiore** rispetto a `GPSExtract` (dove si trovano le foto).
-   - Esclude la cartella degli strumenti e l’output (`GPSExtract`, `GPSData_extracted`).
+   - Viene analizzata la **cartella superiore** rispetto a `GPSExtractionTool` (dove si trovano le foto).
+   - Esclude la cartella degli strumenti e l’output (`GPSExtractionTool`, `GPSData_extracted`).
 
 3. **Preparazione output**
    - Se non esiste, viene creata `GPSData_extracted` accanto allo script.
@@ -170,17 +170,17 @@ It automatically generates:
 
 0. Download **ExifTool**  
    - Download the software from [https://exiftool.org](https://exiftool.org)  
-   - Copy the file into the **`GPSExtract`** folder, then rename it to `exiftool.exe`, along with the `exiftool_files` folder, if present
+   - Copy the file into the **`GPSExtractionTool`** folder, then rename it to `exiftool.exe`, along with the `exiftool_files` folder, if present
 
 ---
 
 ## Quick Start
 
-1. Copy the entire **`GPSExtract`** folder (containing `exiftool.exe` and `extract_gps.bat`)  
+1. Copy the entire **`GPSExtractionTool`** folder (containing `exiftool.exe` and `extract_gps.bat`)  
    inside the folder that contains the photos or videos you want to process.  
    *Example:*  
    ```
-   D:\Trips\2024\Photos\GPSExtract\
+   D:\Trips\2024\Photos\GPSExtractionTool\
    ```
 
 2. Open the `GPSExtract` folder and double-click:  
@@ -192,7 +192,7 @@ It automatically generates:
 
 4. Results will be saved in:  
    ```
-   GPSExtract\GPSData_extracted\
+   GPSExtractionTool\GPSData_extracted\
    ```
 
 ---
@@ -271,12 +271,12 @@ It automatically generates:
 ## ⚙️ Execution flow
 
 1. **Pre-check**
-   - The script verifies that `exiftool.exe` exists inside `GPSExtract`.
+   - The script verifies that `exiftool.exe` exists inside `GPSExtractionTool`.
    - If missing → error and stop.
 
 2. **Source detection**
-   - It scans the **parent folder** of `GPSExtract` (where your photos live).
-   - Tool and output folders are excluded (`GPSExtract`, `GPSData_extracted`).
+   - It scans the **parent folder** of `GPSExtractionTool` (where your photos live).
+   - Tool and output folders are excluded (`GPSExtractionTool`, `GPSData_extracted`).
 
 3. **Output preparation**
    - Creates `GPSData_extracted` next to the script if it does not exist.
