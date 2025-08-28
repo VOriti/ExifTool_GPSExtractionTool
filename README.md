@@ -14,6 +14,29 @@ It automatically generates:
    - GPX with the georeferenced track
    - KML (track and points) to visualize routes and locations in Google Earth, QGIS, and other GIS software
 
+
+---
+**CHANGELOG**
+---
+v2 - v2 Changerlog
+
+New features:
+- Recap at the end: shows file processed, records created, etc.
+- implemented DIAGNOSTIC MODE: if the parameter set "DIAG=1"is 1 instead of 0, it creates also a warnings.log file (useful because DJI drones create a lot, see below) 
+
+Known bugs:
+- track.gpx file is correct but refused by Google MyMaps. Use track.kml instead
+- track.kml connects the end of a video with the start of the next with a simple line. Sometimens can be useful, but if unwanted simply delete the extra line
+
+Bugfix:
+- implemented pause and controls that work correctly
+- implemented powershell to create actual templates for output
+- implemented -charset FileName=cp1252 for italian file path vith àèìòù characthers
+- forced wotrking directory with pushd "%SRC%" to make it work properly with long filepaths
+- set video to generate a single point in pints instead of the whole track to avoid millions of points
+- implemented "-ee -api QuickTimeUTC -n -fileOrder gpsdatetime" to make the script compatible with DJI Drones video. DJI drones photos also creates a lot of warnings but it is an exiftool issue. keep DIAG mode active and check if there are real issues or just minor warnings
+
+
 ---
 **INSTRUCTIONS**
 ---
